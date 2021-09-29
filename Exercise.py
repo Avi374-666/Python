@@ -10,11 +10,42 @@ elif y > x and y > z:
 else:
     print("z is the biggest number")
 
-'''3'''
+'2'
+
+
+def biggest(x, y, z):
+    if (x > y) and (x > z):
+        max = x
+
+    elif (y > x) and (y > z):
+        max = y
+    else:
+        max = z
+
+    return max
+
+
+x = float(input("Enter number 1"))
+y = float(input("Enter number 2"))
+z = float(input("Enter number 3"))
+print((biggest(x, y, z)))
+
+'3'  # a
 name = str(input("Enter Name"))
 age = int(input("Enter Age "))
 year = str((2021 - age) + 100)
 print(name + " will be 100 years old in the year " + year)
+
+'3'  # b Age using function
+name = input('Please enter your name ...')
+age = input('Please enter your age ...')
+
+
+def turns_100(age):
+    return 2021 - int(age) + 100
+
+
+print(name, 'will be 100 years old in ', turns_100(age))
 
 '''6'''
 U1 = input("First Name")
@@ -47,3 +78,35 @@ def compare(u1, u2):
 
 print(compare(U1_reply, U2_reply))
 print("Do you both want to play again??")
+
+'7'
+
+
+# a
+
+def remove(duplicates):
+    f_list = []
+    for num in duplicates:
+        if num not in f_list:
+            f_list.append(num)
+    return f_list
+
+
+duplicates = [2, 6, 10, 15, 17, 2, 15, 17]
+print(remove(duplicates))
+
+'7'
+# b
+
+birthdays = {"Albert Einstein": "14/3/1879",
+             "Benjamin Franklin": "17/01/1706",
+             "Ada Lovelace": "10/12/1815"}
+print('Welcome to the birthday dictionary.We know the birthdays of:\n'
+      'Albert Einstein\n'
+      'Benjamin Franklin\n'
+      'Ada Lovelace\n')
+ques = input("Who's birthday do you want to look up?")
+if ques in birthdays:
+    print(birthdays.get(ques))
+else:
+    print("sorry,there is no such name")
