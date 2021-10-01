@@ -47,6 +47,36 @@ def turns_100(age):
 
 print(name, 'will be 100 years old in ', turns_100(age))
 
+'4'
+
+first = [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89]
+second = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+both = []
+
+if len(second) < len(first):
+    for i in second:
+        if i in first and i not in both:
+            both.append(i)
+
+if len(second) > len(first):
+    for i in first:
+        if i in second and i not in both:
+            both.append(i)
+
+print(both)
+
+'5'
+
+
+def even(list):
+    for i in list:
+        if i % 2 == 0:
+            print(i, end=" ")
+
+
+even([1, 4, 9, 16, 25, 36, 49, 64, 81, 100])
+
 '''6'''
 U1 = input("First Name")
 U2 = input("Second Name")
