@@ -34,7 +34,7 @@ class validtest(unittest.TestCase):
 
     @classmethod
     def tearDownClass(self) \
-            -> print("teardown"):
+            -> print("teardown class"):
         pass
 
     if __name__ == '__main__':
